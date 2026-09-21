@@ -7,11 +7,28 @@
 <meta name="description" content="Vida Diária: kostenlose App für die persönliche Organisation — Gesundheit, Finanzen, Termine, Dokumente, Schule, Fahrzeug und Einkäufe, alles an einem Ort." />
 <link rel="icon" href="/assets/icon.png" />
 <link rel="alternate" hreflang="de" href="https://vidadiariaapp.com/de/faq/" /><link rel="alternate" hreflang="en" href="https://vidadiariaapp.com/en/faq/" /><link rel="alternate" hreflang="es" href="https://vidadiariaapp.com/es/faq/" /><link rel="alternate" hreflang="fr" href="https://vidadiariaapp.com/fr/faq/" /><link rel="alternate" hreflang="it" href="https://vidadiariaapp.com/it/faq/" /><link rel="alternate" hreflang="pt" href="https://vidadiariaapp.com/pt/faq/" />
-<link rel="stylesheet" href="/assets/site.css?v=1286e216ac" />
+<link rel="stylesheet" href="/assets/site.css?v=b7c1c1cee7" />
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body class="page-faq">
 <header class="topbar">
+<script>
+  // Fecha a lista de idiomas ao tocar fora dela ou ao carregar em Esc.
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
+  });
+  // Abre a lista para o lado onde houver espaço (o botão pode ficar à esquerda quando o topo quebra linha).
+  document.addEventListener('toggle', function (e) {
+    var d = e.target;
+    if (!d.classList || !d.classList.contains('lang-menu') || !d.open) return;
+    var ul = d.querySelector('ul');
+    ul.classList.remove('to-right');
+    if (ul.getBoundingClientRect().left < 8) ul.classList.add('to-right');
+  }, true);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') document.querySelectorAll('details.lang-menu[open]').forEach(function (d) { d.open = false; });
+  });
+</script>
   <div class="topbar-inner">
     <a class="brand" href="/de/">
       <img src="/assets/mascot.png" alt="" width="40" height="40" />
@@ -19,7 +36,7 @@
     </a>
     <div class="stores stores-top"><span class="store" aria-disabled="true"><ion-icon name="logo-google-playstore" aria-hidden="true"></ion-icon><span class="store-text"><span class="store-soon">Demnächst</span><span class="store-name">Google Play</span></span></span><span class="store" aria-disabled="true"><ion-icon name="logo-apple" aria-hidden="true"></ion-icon><span class="store-text"><span class="store-soon">Demnächst</span><span class="store-name">App Store</span></span></span></div>
     <nav class="nav" aria-label="Start"><a href="/de/">Start</a><a href="/de/faq/" aria-current="page">Häufige Fragen</a><a href="/de/support/">Support</a></nav>
-    <nav class="langs" aria-label="Sprache"><a href="/de/faq/" hreflang="de" aria-current="true">DE</a><a href="/en/faq/" hreflang="en">EN</a><a href="/es/faq/" hreflang="es">ES</a><a href="/fr/faq/" hreflang="fr">FR</a><a href="/it/faq/" hreflang="it">IT</a><a href="/pt/faq/" hreflang="pt">PT</a></nav>
+    <nav class="langs" aria-label="Sprache"><details class="lang-menu"><summary aria-label="Sprache"><ion-icon name="globe-outline" aria-hidden="true"></ion-icon><span>Deutsch</span><ion-icon class="chev" name="chevron-down" aria-hidden="true"></ion-icon></summary><ul><li><a href="/pt/faq/" hreflang="pt" lang="pt">Português</a></li><li><a href="/en/faq/" hreflang="en" lang="en">English</a></li><li><a href="/es/faq/" hreflang="es" lang="es">Español</a></li><li><a href="/fr/faq/" hreflang="fr" lang="fr">Français</a></li><li><a href="/de/faq/" hreflang="de" lang="de" aria-current="true">Deutsch<ion-icon name="checkmark" aria-hidden="true"></ion-icon></a></li><li><a href="/it/faq/" hreflang="it" lang="it">Italiano</a></li></ul></details></nav>
   </div>
 </header>
 <main>

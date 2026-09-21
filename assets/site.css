@@ -78,8 +78,33 @@ body.page-home { background: #D6E8E0; }
 }
 .nav a:hover, .langs a:hover { color: #fff; }
 .nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
-.langs a { font-size: 12px; letter-spacing: 0.04em; padding: 2px 6px; border-radius: 6px; }
-.langs a[aria-current="true"] { background: #fff; color: var(--bar); }
+.lang-menu { position: relative; }
+.lang-menu summary {
+  list-style: none; cursor: pointer; user-select: none;
+  display: flex; align-items: center; gap: 6px;
+  padding: 5px 10px; border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff; font-size: 13.5px; font-weight: 600;
+}
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary:hover { background: rgba(255, 255, 255, 0.12); }
+.lang-menu summary ion-icon { font-size: 17px; }
+.lang-menu summary .chev { font-size: 13px; transition: transform 0.15s; }
+.lang-menu[open] summary .chev { transform: rotate(180deg); }
+.lang-menu ul {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 20;
+  list-style: none; margin: 0; padding: 6px; min-width: 170px;
+  background: #fff; border-radius: 12px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+.lang-menu ul.to-right { right: auto; left: 0; }
+.lang-menu li a {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 9px 12px; border-radius: 8px;
+  color: var(--text); font-size: 15px; font-weight: 500; text-decoration: none;
+}
+.lang-menu li a:hover { background: #DEEDE8; color: var(--text); }
+.lang-menu li a[aria-current="true"] { color: var(--accent); font-weight: 700; }
+.lang-menu li a ion-icon { font-size: 17px; }
 
 main { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
 
@@ -451,6 +476,10 @@ section h2 { font-size: 26px; margin: 0 0 8px; }
   .stores { justify-content: center; }
   /* Com as lojas, a barra fica alta demais para ficar presa no topo de um telemóvel. */
   .topbar { position: static; }
+  /* Linha 1: logótipo + idioma (à direita); linha 2: lojas; linha 3: menu. */
+  .langs { order: 1; }
+  .stores-top { order: 2; }
+  .nav { order: 3; flex-basis: 100%; }
   .stores-top .store { padding: 4px 8px; gap: 5px; }
   .stores-top .store ion-icon { font-size: 16px; }
   .module-page.has-video .module-page-grid { grid-template-columns: 1fr; }

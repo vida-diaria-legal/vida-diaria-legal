@@ -81,6 +81,9 @@ def load_json(path):
     return json.loads(path.read_text(encoding='utf-8'))
 
 
+LANG_ORDER = ['pt', 'en', 'es', 'fr', 'de', 'it']
+
+
 def site_languages():
     return sorted(p.stem for p in (SITE / '_src' / 'i18n').glob('*.json'))
 
@@ -138,10 +141,22 @@ def paragraphs(text):
 def page(lang, s, langs, current, title, body, path_suffix, alt_paths=None):
     terms, privacy = legal_links(lang)
     href_for = (lambda l: alt_paths[l]) if alt_paths else (lambda l: f'/{l}/{path_suffix}')
-    switch = ''.join(
-        f'<a href="{href_for(l)}" hreflang="{l}"'
-        f'{" aria-current=\"true\"" if l == lang else ""}>{l.upper()}</a>'
-        for l in langs
+    # Escolha do idioma: um só botão (globo + idioma atual) que abre a lista, cada idioma
+    # escrito no próprio idioma. Leva à mesma página no idioma escolhido.
+    names = {l: load_json(SITE / '_src' / 'i18n' / f'{l}.json')['lang_name'] for l in langs}
+    ordered = [l for l in LANG_ORDER if l in langs] + [l for l in langs if l not in LANG_ORDER]
+    items = ''.join(
+        f'<li><a href="{href_for(l)}" hreflang="{l}" lang="{l}"'
+        f'{" aria-current=\"true\"" if l == lang else ""}>{esc(names[l])}'
+        f'{"<ion-icon name=\"checkmark\" aria-hidden=\"true\"></ion-icon>" if l == lang else ""}</a></li>'
+        for l in ordered
+    )
+    switch = (
+        f'<details class="lang-menu"><summary aria-label="{esc(s["nav"]["language"])}">'
+        f'<ion-icon name="globe-outline" aria-hidden="true"></ion-icon>'
+        f'<span>{esc(names[lang])}</span>'
+        f'<ion-icon class="chev" name="chevron-down" aria-hidden="true"></ion-icon></summary>'
+        f'<ul>{items}</ul></details>'
     )
     alternates = ''.join(
         f'<link rel="alternate" hreflang="{l}" href="{DOMAIN}{href_for(l)}" />' for l in langs
@@ -166,6 +181,23 @@ def page(lang, s, langs, current, title, body, path_suffix, alt_paths=None):
 </head>
 <body class="page-{current}">
 <header class="topbar">
+<script>
+  // Fecha a lista de idiomas ao tocar fora dela ou ao carregar em Esc.
+  document.addEventListener('click', function (e) {{
+    document.querySelectorAll('details.lang-menu[open]').forEach(function (d) {{ if (!d.contains(e.target)) d.open = false; }});
+  }});
+  // Abre a lista para o lado onde houver espaço (o botão pode ficar à esquerda quando o topo quebra linha).
+  document.addEventListener('toggle', function (e) {{
+    var d = e.target;
+    if (!d.classList || !d.classList.contains('lang-menu') || !d.open) return;
+    var ul = d.querySelector('ul');
+    ul.classList.remove('to-right');
+    if (ul.getBoundingClientRect().left < 8) ul.classList.add('to-right');
+  }}, true);
+  document.addEventListener('keydown', function (e) {{
+    if (e.key === 'Escape') document.querySelectorAll('details.lang-menu[open]').forEach(function (d) {{ d.open = false; }});
+  }});
+</script>
   <div class="topbar-inner">
     <a class="brand" href="/{lang}/">
       <img src="/assets/mascot.png" alt="" width="40" height="40" />
