@@ -1,0 +1,168 @@
+{
+  "lang_name": "English",
+  "html_lang": "en",
+  "nav": {
+    "home": "Home",
+    "faq": "FAQ",
+    "support": "Support",
+    "language": "Language"
+  },
+  "meta_description": "Vida Diária: a free personal organization app — health, finances, schedule, documents, school, vehicle, and shopping, all in one place.",
+  "hero_title": "Your life, organized in one place.",
+  "hero_sub": "Health, finances, schedule, documents, school, car, and shopping — everything that's scattered around today, brought together in one free App.",
+  "stores_soon": "Coming soon",
+  "store_google": "Google Play",
+  "store_apple": "App Store",
+  "video_title": "Get to know Vida Diária in 25 seconds",
+  "modules_title": "What you can do",
+  "modules_sub": "Nine modules — and you only use the ones that make sense for you.",
+  "modules": {
+    "meuDia": "Everything that's due or happening today, from every module, on a single screen.",
+    "saude": "Weight, sleep, hydration, blood pressure, vaccines, lab tests, and medications for the whole family.",
+    "financas": "Your everyday expenses and your water, electricity, and gas usage, month by month.",
+    "listaCompras": "A pre-list at home, a list at the store, and a check of what you actually paid.",
+    "contas": "Bills to pay and to receive, with a reminder before the due date.",
+    "agenda": "Appointments, birthdays, documents with expiration dates, and useful information.",
+    "entretenimento": "Movies, shows, books, trips, and restaurants someone recommended.",
+    "notasEscolares": "Grades, tests, class schedules, and each student's school records.",
+    "veiculoPessoal": "Fill-ups, maintenance, inspections, and your car's fuel consumption."
+  },
+  "features": [
+    {
+      "title": "Your data is yours",
+      "text": "Everything is protected, and each person only sees their own data. You can generate PDF reports or delete your account, along with everything in it, at any time."
+    },
+    {
+      "title": "Free",
+      "text": "Vida Diária is free for you. It's supported by ads, and we never sell your data."
+    },
+    {
+      "title": "In six languages",
+      "text": "Portuguese, English, Spanish, French, German, and Italian — and you can switch whenever you want."
+    }
+  ],
+  "faq_title": "Frequently asked questions",
+  "faq_intro": "Didn't find your answer? Get in touch with us on the support page.",
+  "support_title": "Support",
+  "support_intro": "We're here to help. Before writing to us, check whether your question is already answered in the FAQ.",
+  "support_channels_title": "Contact us",
+  "support_channels": [
+    {
+      "label": "Questions, suggestions, and problems",
+      "email": "suporte@vidadiariaapp.com"
+    },
+    {
+      "label": "General inquiries",
+      "email": "contato@vidadiariaapp.com"
+    },
+    {
+      "label": "Privacy and personal data",
+      "email": "privacidade@vidadiariaapp.com"
+    }
+  ],
+  "support_in_app_title": "Through the App",
+  "support_in_app_text": "In Settings > Contact/Support, your message reaches us along with technical information that helps us solve the problem faster.",
+  "support_password_title": "Forgot your password?",
+  "support_password_text": "On the login screen, tap Forgot my password and enter the email address you signed up with. You'll receive a 6-digit code to create a new password.",
+  "support_delete_title": "Delete your account",
+  "support_delete_text": "See how to delete your account and all your data, with or without the App installed.",
+  "delete_title": "Delete your account",
+  "delete_intro": "You can delete your Vida Diária account, and all the data it contains, at any time.",
+  "delete_app_title": "Through the App (the fastest way)",
+  "delete_app_steps": [
+    "Open Vida Diária.",
+    "Go to Settings > Account > Delete Account.",
+    "Confirm the operation."
+  ],
+  "delete_app_note": "Deletion is automatic and immediate, and it cannot be undone.",
+  "delete_noapp_title": "Without the App installed",
+  "delete_noapp_text": "Send an email to {email} from the address registered to your account, with the subject «Delete account». We'll delete it and confirm by reply.",
+  "delete_what_title": "What gets deleted",
+  "delete_what_text": "Your account and all the data you've entered, in every module. Any copies still in security backups are overwritten or anonymized within 30 days, as described in the Privacy Policy.",
+  "footer_terms": "Terms of Use",
+  "footer_privacy": "Privacy Policy",
+  "footer_delete": "Delete account",
+  "footer_rights": "Vida Diária",
+  "module_labels": {
+    "what": "What you can do",
+    "start": "Where to start",
+    "video": "See the module in action",
+    "back": "All modules",
+    "prev": "Previous",
+    "next": "Next",
+    "more": "Learn more",
+    "submodules": "Explore each screen",
+    "submodules_hint": "Tap a screen to see what it does and where to start.",
+    "close": "Close"
+  },
+  "module_pages": {
+    "meuDia": {
+      "p1": "My Day - Today is the screen that brings together, in one place, everything that's happening or due today across all the other modules: the medicine at the right time, the bill that's due, the scheduled appointment, the school test, someone's birthday, the car's maintenance. You open the App in the morning and, in seconds, you know what the day calls for, without having to go into each module. You can also jot down a quick reminder, valid for that day only, and hide an item you've already taken care of.",
+      "p2": "My Day - Today has nothing to fill in: it's fed by what you enter in the other modules. Start with one or two that solve something for you right now, like Bills to Pay or the medications in Health, and come back here — anything dated today will already show up. For a one-day reminder, use the ‘Add’ button."
+    },
+    "saude": {
+      "p1": "The Health module brings together your whole family's health care across seven screens: weight and physical activity, sleep, hydration, blood pressure, vaccines, lab tests, and medications. Each entry is saved with its date, and the App shows how things change over time — with charts for weight and hydration —, compares lab test results, and reminds you when it's time to take each medicine. Whenever you need, it generates PDF reports to take to your doctor's appointment.",
+      "p2": "Add the person — you or someone in your family — and pick the screen that matters most right now. If you take medications, start with those: once the times are set, the reminders start arriving on their own. If not, logging today's weight is already a good first step. The other screens can wait."
+    },
+    "financas": {
+      "p1": "Expense Tracking can show you which segment (groceries, housing, transportation, education, leisure...) your money is going to. Each expense is logged with its date, amount, segment, and payment method, and the report organizes everything by month, by yearly total, and by monthly average, with totals for each payment method. In Consumption Control, you can track your water, electricity, and gas meter readings and see on a chart whether your usage is going up or down month by month. The expense list, expenses by segment, and consumption by period can all be generated as PDFs.",
+      "p2": "The first time, choose the currency you'll use for your entries. Then log today's expenses — a coffee, the groceries, the gas. If you like, you can also add past entries. After just a few days of entries, the report already shows where your money is going."
+    },
+    "listaCompras": {
+      "p1": "Supermarket organizes your shopping in two steps. At home, you put together a pre-list of what you need; at the store, you open that pre-list with the ‘At the Store’ button and record the quantity and price of each item as you go. At the end, the App compares the calculated total with what you actually paid at the checkout. The price history of each product is saved, along with the supermarket where you bought it, for your next shopping trips — so you know where you shop for less. For products sold by weight, always record the price per kilo, not the package price: that's what keeps price comparisons accurate from one trip to the next. The list to take to the store and the purchase closing report can be generated as PDFs.",
+      "p2": "Create your first pre-list with the ‘Create Pre-List (At Home)’ button and add the products you need — anything not yet registered is added on the spot, with its unit and department. When you go to the store, tap ‘At the Store’ and choose that pre-list. After your first completed purchase, your next pre-lists will already show the last prices you paid and estimate the total before you leave home."
+    },
+    "contas": {
+      "p1": "Bills to Pay/Receive keeps your household bills in one place: what you have to pay and what you have to receive, each with its due date, amount, and, if you like, the person involved. The App reminds you before the due date, so no bill slips through the cracks, and shows what's still outstanding. A PDF report summarizes whatever period you choose.",
+      "p2": "The first time, choose your currency. Then add the bills due this month — electricity, water, internet, credit card — with the due date and a reminder as far in advance as you prefer. The rest can be added little by little, as they come in."
+    },
+    "agenda": {
+      "p1": "Schedule / Documents brings together four things that usually end up scattered: appointments at a set time, birthdays of the people who matter to you (with a ready-made message to send), documents with an expiration date, like your passport and driver's license, and miscellaneous information — the kind you're always looking for and can never find. Each item can remind you before the date, as far in advance as you choose.",
+      "p2": "Start with your documents: add the ones that expire and let the App remind you before they do — it's the kind of thing you only find out about at the worst possible moment. Then add your family's birthdays and your upcoming appointments."
+    },
+    "entretenimento": {
+      "p1": "Entertainment keeps track of the recommendations you get, or come across, and end up forgetting: movies, shows, books, music, trips, and anything else you like. Each one is saved with its category and the name of who recommended it, and stays in ‘To Watch’ until you get to it; then you just mark it as seen. When it's time to pick something to do on the weekend, the list is ready, and it can be exported as a PDF.",
+      "p2": "The next time someone recommends something, or you see something advertised somewhere, open the module and tap ‘Add Recommendation’ — it only takes a few seconds. If you like, start now with the two or three recommendations you still remember."
+    },
+    "notasEscolares": {
+      "p1": "School Data follows each student's school life: the current school year, the subjects, and the grades for each term, with the average calculated automatically. It also includes the test schedule, the weekly class calendar, and the school records from previous years, which stay saved even after the year is over. Everything can be turned into a PDF report.",
+      "p2": "Add the student and then the school year, marking it as ‘In Progress’. Next, add the subjects and, as grades come out, enter them for each term. The test schedule and the weekly calendar can be filled in whenever it's most convenient."
+    },
+    "veiculoPessoal": {
+      "p1": "Personal Vehicle brings together everything about your vehicle: fill-ups, maintenance, inspections, and mileage, with reminders before each scheduled date. Consumption Calculation uses the fill-ups you make day to day to show how much fuel your vehicle is really using, and it also works with electric and hybrid cars, including charging at home.",
+      "p2": "Add your vehicle with its current mileage, the estimated amount of fuel in the tank, and the tank's total capacity — this information needs to be as accurate as possible, because it goes into the consumption calculation. Then log each fill-up: results appear starting from the first fill-up."
+    }
+  },
+  "submodules": {
+    "saude": {
+      "dailyLog": {
+        "p1": "Here you log your weight for the day and the physical activities you did, and follow your progress on charts: the last 30 days, the change since the start of your goal, and the history of weight gained or lost from one day to the next. If you set a goal — starting weight, target weight, and, if you like, an end date —, the App shows how far you've come and how many days are left. Everything can be generated as a PDF, including the chart images, to take to your doctor or nutritionist.",
+        "p2": "Log today's weight, ideally always at the same time of day, and note the day's activities. Then create your goal in ‘Create/View Goal’. After a few days of entries, the charts already show the trend."
+      },
+      "exams": {
+        "p1": "Keeps the results of your lab tests, organized by date, lab, and sample collected. Each test can have a numeric result, with its unit and reference range, or a qualitative one, such as Positive or Negative. The App builds the history of each test and lets you compare results from different dates in PDF reports: the history of a test, a comparison between tests, and the results for a period.",
+        "p2": "Tap ‘Register Exam’, enter the date and the lab, and add the results, test by test, just as they appear on the lab report. Always use the same unit for the same test: that's what lets you compare results over time."
+      },
+      "vaccines": {
+        "p1": "Brings your whole family's vaccination records together in one place: each vaccine received is recorded with its dose and date, organized by person. When you need to prove a vaccination or check what's still missing, the information is at hand, and the general vaccine report can be generated as a PDF.",
+        "p2": "Add the vaccinated person and tap ‘Add Vaccine’ to enter the doses they've already received, using the paper vaccination card as a guide. From then on, just add each new dose on the day it's given."
+      },
+      "hydration": {
+        "p1": "Helps you drink the amount of water you need throughout the day. You set a daily goal in liters and choose how you want to be reminded: at time intervals, at set times, or with no set time. Each entry counts toward today's goal, and a chart shows, day by day, what percentage of the goal you reached. The history and the total intake per day can be generated as PDFs.",
+        "p2": "Create your goal in ‘Create/View Goal’, with the daily amount and the type of reminder you prefer. Then just log your water every time you drink — the App keeps adding it up and shows how much is left."
+      },
+      "bloodPressure": {
+        "p1": "Records your blood pressure readings with date and time and keeps the complete history, so you and your doctor can follow how it changes. The PDF report includes all readings for the chosen period, with a legend that helps interpret the values.",
+        "p2": "Tap ‘New Reading’ after each measurement and enter the values shown on the monitor. Always measuring under the same conditions — ideally at the same time of day and at rest — makes the history more useful."
+      },
+      "sleep": {
+        "p1": "Tracks the quality of your sleep: what time you went to bed, what time you woke up, and how you felt during the day. The App shows how long you slept each night and includes the recommended sleep targets for each age group, according to the U.S. National Sleep Foundation, plus tips on what to look for after a few weeks of entries. The history can be generated as a PDF.",
+        "p2": "Fill in the entry in the morning, right after you wake up, while the night is still fresh in your memory. After a few weeks, compare your results with the target for your age group."
+      },
+      "medications": {
+        "p1": "Organizes the whole family's medications: name, unit, dosage, frequency — single dose, daily, or on certain days of the week — and times. The App reminds you when each dose is due and shows today's prescription and the weekly calendar. Today's prescription, all prescriptions, and the medication calendar can be generated as PDFs, ready to show your doctor or caregiver.",
+        "p2": "Tap ‘New Prescription’ and add each medication with its dosage and times, turning on the alerts. From then on, the reminders arrive on their own, and the ‘Today's Prescription’ screen shows what to take at each time of day."
+      }
+    }
+  }
+}

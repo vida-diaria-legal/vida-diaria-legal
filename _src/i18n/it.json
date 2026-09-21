@@ -1,0 +1,168 @@
+{
+  "lang_name": "Italiano",
+  "html_lang": "it",
+  "nav": {
+    "home": "Home",
+    "faq": "Domande frequenti",
+    "support": "Assistenza",
+    "language": "Lingua"
+  },
+  "meta_description": "Vida Diária: app gratuita di organizzazione personale — salute, finanze, agenda, documenti, scuola, veicolo e spesa, tutto in un unico posto.",
+  "hero_title": "La tua vita organizzata, in un unico posto.",
+  "hero_sub": "Salute, finanze, agenda, documenti, scuola, auto e spesa — tutto ciò che oggi è sparso qua e là, riunito in un'app gratuita.",
+  "stores_soon": "Prossimamente",
+  "store_google": "Google Play",
+  "store_apple": "App Store",
+  "video_title": "Scopri Vida Diária in 25 secondi",
+  "modules_title": "Cosa puoi fare",
+  "modules_sub": "Nove moduli — e usi solo quelli che fanno al caso tuo.",
+  "modules": {
+    "meuDia": "Tutto ciò che scade o accade oggi, da tutti i moduli, in un'unica schermata.",
+    "saude": "Peso, sonno, idratazione, pressione, vaccini, esami e farmaci di tutta la famiglia.",
+    "financas": "Le spese di tutti i giorni e i consumi di acqua, luce e gas, mese per mese.",
+    "listaCompras": "La pre-lista a casa, la lista al supermercato e il controllo di quanto hai pagato.",
+    "contas": "Conti da pagare e da ricevere, con un avviso prima della scadenza.",
+    "agenda": "Appuntamenti, compleanni, documenti con scadenza e informazioni utili.",
+    "entretenimento": "Film, serie, libri, viaggi e ristoranti che qualcuno ti ha consigliato.",
+    "notasEscolares": "Voti, verifiche, orario delle lezioni e la carriera scolastica di ogni studente.",
+    "veiculoPessoal": "Rifornimenti, tagliandi, revisioni e i consumi della tua auto."
+  },
+  "features": [
+    {
+      "title": "I tuoi dati sono tuoi",
+      "text": "Tutto è protetto e ognuno vede solo i propri dati. Puoi generare report in PDF o eliminare il tuo account, con tutto ciò che contiene, in qualsiasi momento."
+    },
+    {
+      "title": "Gratuita",
+      "text": "Vida Diária è gratuita per te. Si sostiene con la pubblicità, e non vendiamo mai i tuoi dati."
+    },
+    {
+      "title": "In sei lingue",
+      "text": "Portoghese, inglese, spagnolo, francese, tedesco e italiano — e puoi cambiare quando vuoi."
+    }
+  ],
+  "faq_title": "Domande frequenti",
+  "faq_intro": "Non hai trovato la risposta? Scrivici dalla pagina di assistenza.",
+  "support_title": "Assistenza",
+  "support_intro": "Siamo qui per aiutarti. Prima di scrivere, controlla se la tua domanda è già tra le domande frequenti.",
+  "support_channels_title": "Scrivici",
+  "support_channels": [
+    {
+      "label": "Domande, suggerimenti e problemi",
+      "email": "suporte@vidadiariaapp.com"
+    },
+    {
+      "label": "Questioni generali",
+      "email": "contato@vidadiariaapp.com"
+    },
+    {
+      "label": "Privacy e dati personali",
+      "email": "privacidade@vidadiariaapp.com"
+    }
+  ],
+  "support_in_app_title": "Dall'App",
+  "support_in_app_text": "In Impostazioni > Contatto/Assistenza, il tuo messaggio ci arriva insieme alle informazioni tecniche che aiutano a risolvere il problema più in fretta.",
+  "support_password_title": "Hai dimenticato la password?",
+  "support_password_text": "Nella schermata di accesso, tocca Ho dimenticato la password e inserisci l'e-mail con cui ti sei registrato. Riceverai un codice di 6 cifre per creare una nuova password.",
+  "support_delete_title": "Eliminare l'account",
+  "support_delete_text": "Scopri come eliminare il tuo account e tutti i tuoi dati, con o senza l'App installata.",
+  "delete_title": "Eliminare il tuo account",
+  "delete_intro": "Puoi eliminare il tuo account di Vida Diária, e tutti i dati che contiene, in qualsiasi momento.",
+  "delete_app_title": "Dall'App (il modo più rapido)",
+  "delete_app_steps": [
+    "Apri Vida Diária.",
+    "Vai in Impostazioni > Account > Elimina Account.",
+    "Conferma l'operazione."
+  ],
+  "delete_app_note": "L'eliminazione è automatica e immediata, e non può essere annullata.",
+  "delete_noapp_title": "Senza l'App installata",
+  "delete_noapp_text": "Invia un'e-mail a {email}, dall'indirizzo registrato nel tuo account, con oggetto «Elimina account». Procediamo con l'eliminazione e te lo confermiamo con una risposta.",
+  "delete_what_title": "Cosa viene eliminato",
+  "delete_what_text": "Il tuo account e tutti i dati che hai registrato, in tutti i moduli. Le copie ancora presenti nei backup di sicurezza vengono sovrascritte o anonimizzate entro 30 giorni, come descritto nell'Informativa sulla Privacy.",
+  "footer_terms": "Termini di Utilizzo",
+  "footer_privacy": "Informativa sulla Privacy",
+  "footer_delete": "Elimina account",
+  "footer_rights": "Vida Diária",
+  "module_labels": {
+    "what": "Cosa puoi fare",
+    "start": "Da dove cominciare",
+    "video": "Guarda il modulo in azione",
+    "back": "Tutti i moduli",
+    "prev": "Precedente",
+    "next": "Successivo",
+    "more": "Scopri di più",
+    "submodules": "Scopri ogni schermata",
+    "submodules_hint": "Tocca una schermata per vedere cosa fa e da dove cominciare.",
+    "close": "Chiudi"
+  },
+  "module_pages": {
+    "meuDia": {
+      "p1": "Il Mio Giorno - Oggi è la schermata che riunisce, in un unico posto, tutto ciò che accade o scade oggi in tutti gli altri moduli: il farmaco all'ora giusta, il conto in scadenza, l'appuntamento fissato, la verifica a scuola, il compleanno di qualcuno, il tagliando dell'auto. Apri l'App al mattino e, in pochi secondi, sai cosa ti chiede la giornata, senza dover entrare in ogni modulo. Puoi anche annotare un promemoria rapido, valido solo per quel giorno, e nascondere un elemento che hai già sistemato.",
+      "p2": "Il Mio Giorno - Oggi non ha niente da compilare: si alimenta di ciò che registri negli altri moduli. Comincia da uno o due che ti risolvono qualcosa adesso, come Conti da Pagare o i farmaci in Salute, e torna qui — ciò che ha una data per oggi comparirà già. Per un promemoria di un solo giorno, usa il pulsante ‘Aggiungi’."
+    },
+    "saude": {
+      "p1": "Il modulo Salute riunisce la cura della salute di tutta la famiglia in sette schermate: peso e attività fisica, sonno, idratazione, pressione arteriosa, vaccini, esami di laboratorio e farmaci. Ogni registrazione viene conservata con la data, e l'App mostra l'andamento nel tempo — con grafici del peso e dell'idratazione —, confronta i risultati degli esami e ti avvisa quando è ora di prendere ogni farmaco. Quando serve, genera report in PDF da portare alla visita.",
+      "p2": "Registra la persona — tu o qualcuno della famiglia — e scegli la schermata più importante in questo momento. Se prendi dei farmaci, comincia da quelli: una volta inseriti gli orari, i promemoria arrivano da soli. Altrimenti, registrare il peso di oggi è già un buon primo passo. Le altre schermate possono aspettare."
+    },
+    "financas": {
+      "p1": "Il Controllo Spese ti mostra verso quale categoria (supermercato, casa, trasporti, istruzione, tempo libero...) stanno andando i tuoi soldi. Ogni spesa viene inserita con data, importo, categoria e metodo di pagamento, e il report organizza tutto per mese, per totale dell'anno e per media mensile, con i totali per metodo di pagamento. Nel Controllo del Consumo, invece, puoi seguire le letture di acqua, luce e gas e vedere, in un grafico, se i consumi aumentano o diminuiscono mese dopo mese. L'elenco delle spese, le spese per categoria e i consumi per periodo possono essere generati in PDF.",
+      "p2": "La prima volta, scegli la valuta in cui inserirai gli importi. Poi inserisci le spese di oggi — un caffè, la spesa, il carburante. Se vuoi, puoi anche inserire spese passate. Bastano pochi giorni di registrazioni perché il report mostri già dove vanno i tuoi soldi."
+    },
+    "listaCompras": {
+      "p1": "Il Supermercato organizza la spesa in due tempi. A casa prepari una pre-lista con ciò che ti serve; al supermercato apri quella pre-lista con il pulsante ‘Al Supermercato’ e registri la quantità e il prezzo di ogni prodotto. Alla fine, l'App confronta il totale calcolato con quanto hai davvero pagato alla cassa. Resta salvato lo storico dei prezzi di ogni prodotto, con il supermercato in cui l'hai comprato, per le spese successive — così sai dove compri a meno. Per i prodotti venduti a peso, registra sempre il prezzo al chilo, e non il prezzo della confezione: è questo che mantiene corretti i confronti di prezzo da una spesa all'altra. La lista da portare al supermercato e il report di chiusura della spesa possono essere generati in PDF.",
+      "p2": "Crea la tua prima pre-lista con il pulsante ‘Crea Pre-Lista (A Casa)’ e aggiungi i prodotti che ti servono — quelli non ancora registrati si inseriscono al momento, con unità e reparto. Quando vai al supermercato, tocca ‘Al Supermercato’ e scegli quella pre-lista. Dopo la prima spesa conclusa, le pre-liste successive mostrano già gli ultimi prezzi pagati e stimano il totale prima ancora che tu esca di casa."
+    },
+    "contas": {
+      "p1": "Conti da Pagare/Ricevere tiene i conti di casa in un unico posto: ciò che devi pagare e ciò che devi ricevere, ognuno con scadenza, importo e, se vuoi, la persona coinvolta. L'App ti avvisa prima della scadenza, perché nessun conto passi inosservato, e mostra ciò che è ancora in sospeso. Un report in PDF riassume il periodo che scegli.",
+      "p2": "La prima volta, scegli la valuta. Poi registra i conti che scadono questo mese — luce, acqua, internet, carta di credito — con la data di scadenza e l'avviso con l'anticipo che preferisci. Gli altri puoi inserirli poco alla volta, man mano che arrivano."
+    },
+    "agenda": {
+      "p1": "Agenda / Documenti riunisce quattro cose che di solito restano sparse: appuntamenti con orario fissato, compleanni delle persone importanti per te (con un messaggio pronto da inviare), documenti con data di scadenza, come passaporto e patente, e informazioni varie — quelle che cerchiamo sempre e non troviamo mai. Ogni elemento può avvisarti prima della data, con l'anticipo che scegli tu.",
+      "p2": "Comincia dai documenti: registra quelli con una scadenza e lascia che l'App te lo ricordi prima che scadano — è il genere di cosa che si scopre sempre nel momento sbagliato. Poi aggiungi i compleanni della famiglia e i prossimi appuntamenti."
+    },
+    "entretenimento": {
+      "p1": "Intrattenimento conserva i consigli che ricevi, o che vedi in giro, e che finisci per dimenticare: film, serie, libri, musica, viaggi e tutto ciò che vuoi. Ognuno resta con la sua categoria e il nome di chi te l'ha consigliato, e sta in ‘Da Vedere’ finché non ci arrivi; poi basta segnarlo come visto. Quando devi scegliere cosa fare nel fine settimana, la lista è pronta, e puoi esportarla in PDF.",
+      "p2": "La prossima volta che qualcuno ti consiglia qualcosa, o che vedi la pubblicità di qualcosa da qualche parte, apri il modulo e tocca ‘Aggiungi Suggerimento’ — bastano pochi secondi. Se vuoi, comincia subito dai due o tre consigli che ricordi ancora."
+    },
+    "notasEscolares": {
+      "p1": "Il modulo Dati Scolastici segue il percorso scolastico di ogni studente: l'anno scolastico in corso, le materie e i voti di ogni periodo, con la media calcolata automaticamente. Include anche l'agenda delle verifiche, il calendario settimanale delle lezioni e la carriera scolastica degli anni precedenti, che resta salvata anche dopo la fine dell'anno. Tutto può diventare un report in PDF.",
+      "p2": "Registra lo studente e poi l'anno scolastico, indicandolo come ‘In Corso’. Poi aggiungi le materie e, man mano che escono i voti, inseriscili in ogni periodo. L'agenda delle verifiche e il calendario settimanale puoi compilarli quando ti è più comodo."
+    },
+    "veiculoPessoal": {
+      "p1": "Veicolo Personale riunisce tutto sul tuo veicolo: rifornimenti, tagliandi, revisioni e chilometraggio, con avvisi prima di ogni data fissata. Il Calcolo del Consumo usa i rifornimenti che fai ogni giorno per mostrare quanto consuma davvero il veicolo, e funziona anche con auto elettriche e ibride, compresa la ricarica a casa.",
+      "p2": "Registra il veicolo con il chilometraggio attuale, la quantità stimata di carburante nel serbatoio e la capacità totale del serbatoio — queste informazioni devono essere il più precise possibile, perché entrano nel calcolo del consumo. Poi registra ogni rifornimento: i risultati compaiono già dal primo rifornimento."
+    }
+  },
+  "submodules": {
+    "saude": {
+      "dailyLog": {
+        "p1": "Qui registri il tuo peso del giorno e le attività fisiche che hai fatto, e segui l'andamento nei grafici: gli ultimi 30 giorni, la variazione dall'inizio dell'obiettivo e lo storico di aumento o perdita di peso da un giorno all'altro. Se definisci un obiettivo — peso iniziale, peso desiderato e, se vuoi, una data finale —, l'App mostra quanto sei già avanzato e quanti giorni mancano. Tutto può essere generato in PDF, compresa l'immagine dei grafici, da portare al medico o al nutrizionista.",
+        "p2": "Registra il peso di oggi, possibilmente sempre alla stessa ora, e annota le attività del giorno. Poi crea il tuo obiettivo in ‘Crea/Consulta Obiettivo’. Con qualche giorno di registrazioni, i grafici mostrano già la tendenza."
+      },
+      "exams": {
+        "p1": "Conserva i risultati dei tuoi esami di laboratorio, organizzati per data, laboratorio e materiale prelevato. Ogni esame può avere un risultato numerico, con unità di misura e valore di riferimento, oppure qualitativo, come Positivo o Negativo. L'App costruisce lo storico di ogni esame e ti permette di confrontare risultati di date diverse in report PDF: lo storico di un esame, il confronto tra esami e i risultati di un periodo.",
+        "p2": "Tocca ‘Registra Esame’, indica la data e il laboratorio e inserisci i risultati, esame per esame, così come compaiono nel referto. Usa sempre la stessa unità di misura per lo stesso esame: è questo che permette di confrontare i risultati nel tempo."
+      },
+      "vaccines": {
+        "p1": "Riunisce il libretto vaccinale di tutta la famiglia in un unico posto: ogni vaccino fatto viene registrato con la dose e la data, organizzato per persona. Quando devi dimostrare una vaccinazione o controllare cosa manca, l'informazione è a portata di mano, e il report generale dei vaccini può essere generato in PDF.",
+        "p2": "Registra la persona vaccinata e tocca ‘Aggiungi Vaccino’ per inserire le dosi che ha già fatto, aiutandoti con il libretto vaccinale cartaceo. Da lì in poi, basta aggiungere ogni nuova dose il giorno in cui viene fatta."
+      },
+      "hydration": {
+        "p1": "Ti aiuta a bere la quantità d'acqua di cui hai bisogno durante la giornata. Definisci un obiettivo giornaliero in litri e scegli come vuoi ricevere i promemoria: a intervalli di tempo, a orari stabiliti o senza orario definito. Ogni registrazione si somma all'obiettivo di oggi, e un grafico mostra, giorno per giorno, quale percentuale dell'obiettivo hai raggiunto. Lo storico e il consumo totale per giorno possono essere generati in PDF.",
+        "p2": "Crea il tuo obiettivo in ‘Crea/Consulta Obiettivo’, con la quantità giornaliera e il tipo di promemoria che preferisci. Poi basta registrare l'acqua ogni volta che bevi — l'App fa la somma e ti mostra quanto manca."
+      },
+      "bloodPressure": {
+        "p1": "Registra le tue misurazioni della pressione arteriosa con data e ora e conserva lo storico completo, così tu e il tuo medico potete seguirne l'andamento. Il report in PDF riporta tutte le misurazioni del periodo scelto, con una legenda che aiuta a interpretare i valori.",
+        "p2": "Tocca ‘Nuovo Registro’ dopo ogni misurazione e inserisci i valori mostrati dall'apparecchio. Misurare sempre nelle stesse condizioni — possibilmente alla stessa ora e a riposo — rende lo storico più utile."
+      },
+      "sleep": {
+        "p1": "Segue la qualità del tuo sonno: a che ora sei andato a letto, a che ora ti sei svegliato e come ti sei sentito durante il giorno. L'App mostra quanto hai dormito ogni notte e riporta gli obiettivi di sonno consigliati per ogni fascia d'età dalla National Sleep Foundation statunitense, oltre a suggerimenti su cosa osservare dopo qualche settimana di registrazioni. Lo storico può essere generato in PDF.",
+        "p2": "Compila la registrazione al mattino, appena sveglio, quando la notte è ancora fresca nella memoria. Dopo qualche settimana, confronta i risultati con l'obiettivo della tua fascia d'età."
+      },
+      "medications": {
+        "p1": "Organizza i farmaci di tutta la famiglia: nome, unità, dosaggio, frequenza — dose unica, giornaliera o in giorni della settimana — e orari. L'App ti avvisa all'ora di ogni dose e mostra la prescrizione di oggi e il calendario della settimana. La prescrizione di oggi, tutte le prescrizioni e il calendario dei farmaci possono essere generati in PDF, pronti da mostrare al medico o a chi si prende cura della persona.",
+        "p2": "Tocca ‘Nuova Prescrizione’ e registra ogni farmaco con il dosaggio e gli orari, attivando gli avvisi. Da lì in poi, i promemoria arrivano da soli, e la schermata ‘Prescrizione di Oggi’ mostra cosa prendere in ogni momento della giornata."
+      }
+    }
+  }
+}

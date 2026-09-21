@@ -1,0 +1,465 @@
+/* Estilo das páginas do site (início, FAQ, suporte, excluir conta).
+ * As páginas de Termos e Privacidade continuam com style.css.
+ * Cores iguais às da app: verde #1F6350, verde claro #DEEDE8 dos ícones dos módulos,
+ * bege #F1EDE4 / #D9D5CC e texto #2E2A26. */
+:root {
+  --accent: #1F6350;
+  --accent-soft: #DEEDE8;
+  --text: #2E2A26;
+  --muted: #6B6459;
+  --line: #DDD5C4;
+  /* Fundo da página: o bege claro da app (antes era branco). */
+  --bg: #F1EDE4;
+  --bg-alt: #E6E0D4;
+  --radius: 16px;
+  /* Topo e rodapé: a mesma cor em todas as páginas, o verde escuro dos botões da app —
+   * diferente tanto do verde claro da página inicial como do bege das outras. */
+  --bar: #1F6350;
+  --bar-text: rgba(255, 255, 255, 0.82);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+h1, h2 { line-height: 1.2; text-wrap: balance; }
+
+/* A página inicial tem fundo próprio, em verde claro (o tom dos ícones dos módulos, um
+ * pouco mais intenso), para se destacar das outras páginas, que ficam em bege. */
+body.page-home { background: #D6E8E0; }
+
+/* ---------- topo ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bar);
+  border-bottom: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+.topbar-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: auto;
+}
+.brand img { border-radius: 10px; }
+.nav, .langs { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.nav a, .langs a {
+  text-decoration: none;
+  color: var(--bar-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav a:hover, .langs a:hover { color: #fff; }
+.nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.langs a { font-size: 12px; letter-spacing: 0.04em; padding: 2px 6px; border-radius: 6px; }
+.langs a[aria-current="true"] { background: #fff; color: var(--bar); }
+
+main { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+/* ---------- início ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 0 32px;
+}
+.hero-mascot { border-radius: 40px; flex-shrink: 0; max-width: 100%; height: auto; }
+.hero h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 12px; }
+.hero p { font-size: 18px; color: var(--muted); margin: 0 0 24px; max-width: 34em; }
+
+.stores { display: flex; flex-wrap: wrap; gap: 12px; }
+.store {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--text);
+  color: #fff;
+  cursor: default;
+}
+.store ion-icon { font-size: 26px; }
+.store-text { display: flex; flex-direction: column; line-height: 1.15; }
+.store-soon { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.75; }
+.store-name { font-size: 17px; font-weight: 700; }
+/* Versão pequena na barra do topo, em todas as páginas (pedido comercial: as lojas
+   sempre à vista). Na página inicial continuam também os botões grandes. */
+.stores-top { gap: 8px; flex-wrap: nowrap; }
+.stores-top .store {
+  padding: 5px 11px; gap: 7px; border-radius: 9px;
+  background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.stores-top .store ion-icon { font-size: 18px; }
+.stores-top .store-soon { font-size: 8.5px; }
+.stores-top .store-name { font-size: 12.5px; }
+
+section h2 { font-size: 26px; margin: 0 0 8px; }
+.lead { color: var(--muted); margin: 0 0 24px; }
+
+.video { padding: 32px 0; text-align: center; }
+.video h2 { margin-bottom: 20px; }
+/* Leitor igual ao da app (assets/player.js). A caixa do YouTube é mais alta que o vídeo:
+ * a faixa de cima (onde o YouTube escreve o título) fica atrás do nosso cabeçalho e a de
+ * baixo é cortada pela moldura. */
+.player {
+  --mask: 60px;
+  position: relative;
+  width: min(320px, 100%);
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* clip e não só hidden: com hidden o navegador ainda desloca o interior quando o
+   * vídeo ganha o foco (subia 30px, cortando o nosso cabeçalho em cima e deixando uma
+   * faixa preta embaixo). clip não deixa deslocar de jeito nenhum. */
+  overflow: clip;
+  background: #000;
+}
+.player::before { content: ""; display: block; padding-top: calc(100% * 16 / 9 + var(--mask)); }
+.player-frame { position: absolute; top: 0; left: 0; right: 0; height: calc(100% + var(--mask)); }
+.player-slot, .player-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.player-head {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: var(--mask);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  background: #000;
+  color: #fff;
+  text-align: left;
+}
+.player-head img { border-radius: 9px; flex-shrink: 0; }
+.player-head > span { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.player-head strong { font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player-head > span > span { font-size: 12px; opacity: 0.85; }
+.player-click { position: absolute; top: var(--mask); left: 0; right: 0; bottom: 0; z-index: 2; cursor: pointer; }
+.player-progress {
+  position: absolute;
+  left: 12px; right: 12px; bottom: 10px;
+  height: 3px;
+  z-index: 3;
+  border-radius: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.3);
+}
+.player-progress > span { display: block; height: 100%; width: 0; background: #fff; }
+.player-poster {
+  position: absolute;
+  top: var(--mask); left: 0; right: 0; bottom: 0;
+  z-index: 4;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  /* O azul do fundo dos vídeos. Acima da imagem, a cor exata da borda de cima dela;
+   * abaixo, a da borda de baixo — assim não se vê emenda onde a imagem acaba. */
+  background: linear-gradient(#A2C6DD 0 50%, #BCD8E6 50% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-poster img { width: 100%; height: auto; }
+.player-play {
+  position: absolute;
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.player-poster.is-loading .player-play { opacity: 0.55; }
+.player.is-playing .player-poster { display: none; }
+
+.modules { padding: 32px 0; }
+/* Mesmo arranjo da tela inicial da app: fundo bege, cartões brancos, o Meu Dia a toda
+ * a largura e os outros em duas colunas, com o ícone em cima e o nome embaixo. */
+.module-board {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #D9D5CC;
+  border-radius: 20px;
+}
+.module-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  /* minmax(0, …): sem isto, uma palavra longa (sobretudo em alemão) alarga a coluna
+     e a grelha passa da largura do ecrã. */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.module > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  height: 100%;
+  padding: 18px 12px;
+  background: #fff;
+  border-radius: 14px;
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.module > a:hover { box-shadow: 0 6px 18px rgba(46, 42, 38, 0.12); transform: translateY(-1px); }
+.module-wide { grid-column: 1 / -1; }
+.module-wide > a { flex-direction: row; justify-content: center; text-align: left; gap: 14px; }
+.module-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+.module strong { font-size: 15px; }
+.module-text > span { color: var(--muted); font-size: 13.5px; line-height: 1.45; }
+.module-text > span.module-more { color: var(--accent); font-weight: 600; font-size: 13px; margin-top: 4px; }
+
+/* Página inicial: módulos à esquerda, vídeo de apresentação à direita. O vídeo acompanha
+ * a rolagem (sticky), para continuar à vista enquanto se percorrem os módulos. */
+.home-grid.has-video {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 40px;
+  align-items: start;
+}
+.home-grid .module-board { max-width: none; }
+.home-grid .video { padding-top: 32px; position: sticky; top: 72px; }
+/* Entre 900 e 1100 px a barra do topo (com as lojas) pode ocupar duas linhas. */
+@media (max-width: 1100px) { .home-grid .video { top: 104px; } }
+.home-grid .video h2 { font-size: 20px; margin-bottom: 14px; }
+
+/* Abaixo de 900px as duas colunas ficariam apertadas (cartões dos módulos estreitos
+ * demais): empilha, com o vídeo antes dos módulos para não ficar escondido no fim. */
+@media (max-width: 900px) {
+  .home-grid.has-video { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .home-grid .video { order: -1; position: static; padding-bottom: 8px; }
+}
+
+/* ---------- página de cada módulo ---------- */
+.module-page { max-width: 1000px; margin: 0 auto; padding: 28px 0 56px; }
+.back { display: inline-block; margin-bottom: 20px; color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14px; }
+.back:hover { color: var(--accent); }
+.module-page-grid { display: grid; gap: 40px; align-items: start; }
+.module-page.has-video .module-page-grid { grid-template-columns: minmax(0, 1fr) 320px; }
+.module-page-title { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.module-page-title .chip { width: 48px; height: 48px; font-size: 25px; border-radius: 13px; }
+.module-page-title h1 { font-size: clamp(26px, 4vw, 36px); margin: 0; }
+.module-page-text h2 { font-size: 18px; color: var(--accent); margin: 28px 0 8px; }
+.module-page-text p { margin: 0; font-size: 17px; line-height: 1.7; max-width: 38em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.module-video h2 { font-size: 16px; margin: 0 0 12px; text-align: center; color: var(--muted); }
+.module-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.module-pager a { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 2px; text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 600; }
+.module-pager a strong { color: var(--text); font-size: 16px; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+.module-pager a.next { text-align: right; }
+.module-pager a:hover strong { color: var(--accent); }
+.chip {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.features { padding: 24px 0 56px; }
+.features ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+.features li { display: flex; flex-direction: column; gap: 4px; border-top: 3px solid var(--accent); padding-top: 14px; }
+.features strong { font-size: 17px; }
+.features span { color: var(--muted); font-size: 15px; }
+
+/* ---------- páginas de texto ---------- */
+.doc { max-width: 720px; margin: 0 auto; padding: 40px 0 64px; }
+.doc h1 { font-size: 32px; margin: 0 0 10px; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+.doc h2 { font-size: 19px; color: var(--accent); margin: 32px 0 8px; }
+.doc p { margin: 0 0 12px; }
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; flex-shrink: 0; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { color: var(--muted); margin: 10px 0 0; }
+
+.channels { list-style: none; margin: 0; padding: 0; }
+.channels li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.channels span { color: var(--muted); }
+.channels a { font-weight: 600; word-break: break-all; }
+
+.steps { padding-left: 22px; margin: 0 0 12px; }
+.steps li { margin-bottom: 6px; }
+.note { background: var(--accent-soft); padding: 12px 16px; border-radius: 12px; }
+
+/* ---------- submódulos (telas de um módulo, com janela) ---------- */
+.submodules { margin-top: 32px; }
+.submodules h2 { margin-bottom: 4px; }
+.submodules-hint { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
+.submodule-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.submodule-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  font-size: 14.5px;
+  text-align: left;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.submodule-btn:hover { border-color: var(--accent); box-shadow: 0 4px 14px rgba(46, 42, 38, 0.1); }
+.submodule-btn .chip { width: 34px; height: 34px; font-size: 18px; border-radius: 10px; }
+.submodule-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 48px);
+  border: 0;
+  border-radius: 20px;
+  padding: 24px;
+  color: var(--text);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+/* Mesma opacidade do fundo das janelas da app. */
+.submodule-dialog::backdrop { background: rgba(0, 0, 0, 0.35); }
+.submodule-dialog-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.submodule-dialog-head h2 { flex: 1; font-size: 21px; margin: 0; }
+.submodule-close {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  color: var(--text);
+  font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.submodule-dialog h3 { font-size: 16px; color: var(--accent); margin: 20px 0 6px; }
+.submodule-dialog p { margin: 0; line-height: 1.7; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+/* Textos longos (Termos, Privacidade, Excluir conta) num cartão branco sobre o fundo da
+ * página: dá uma margem clara ao texto. */
+.doc-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 36px 40px;
+  box-shadow: 0 4px 18px rgba(46, 42, 38, 0.06);
+}
+.doc-card > :first-child { margin-top: 0; }
+.doc-card .effective-date { color: var(--muted); font-size: 13px; margin: 0 0 24px; }
+/* Traduções dos textos legais: aviso de que vale a versão em português. */
+.doc-card .translation-note {
+  margin: -12px 0 24px; padding: 10px 14px; border-radius: 10px;
+  background: #DEEDE8; color: var(--text); font-size: 14px; line-height: 1.55;
+}
+.doc-card .translation-note a { color: var(--accent); font-weight: 600; }
+.doc-card.legal .intro { text-align: justify; margin-bottom: 24px; }
+.doc-card.legal p, .doc-card.legal li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.doc-card.legal section h2 { padding-top: 16px; border-top: 1px solid var(--line); }
+.doc-card.legal h3 { font-size: 16px; margin: 18px 0 6px; }
+.doc-card.legal ul { padding-left: 22px; }
+.doc-card.legal li { margin-bottom: 6px; }
+
+/* ---------- rodapé ---------- */
+.footer { background: var(--bar); margin-top: 24px; }
+.footer-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px 16px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-size: 14px;
+}
+.footer a { color: var(--bar-text); text-decoration: none; }
+.footer a:hover { color: #fff; text-decoration: underline; }
+
+/* ---------- telemóvel ---------- */
+@media (max-width: 720px) {
+  .hero { flex-direction: column; text-align: center; padding-top: 32px; gap: 20px; }
+  .hero-mascot { width: 140px; height: 140px; border-radius: 32px; }
+  .hero p { margin-left: auto; margin-right: auto; }
+  .stores { justify-content: center; }
+  /* Com as lojas, a barra fica alta demais para ficar presa no topo de um telemóvel. */
+  .topbar { position: static; }
+  .stores-top .store { padding: 4px 8px; gap: 5px; }
+  .stores-top .store ion-icon { font-size: 16px; }
+  .module-page.has-video .module-page-grid { grid-template-columns: 1fr; }
+  .submodule-grid { grid-template-columns: 1fr; }
+  .doc-card { padding: 24px 18px; border-radius: 16px; }
+  /* Títulos de uma só palavra longa ("Datenschutzerklärung") têm de caber a 320 px. */
+  .doc h1 { font-size: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}

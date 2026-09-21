@@ -1,63 +1,21 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vida Diária</title>
-<meta name="description" content="Termos de Uso e Política de Privacidade do aplicativo Vida Diária." />
-<link rel="stylesheet" href="/assets/style.css" />
+<link rel="icon" href="/assets/icon.png" />
+<script>
+  // Abre o site no idioma do navegador de quem visita; português se não houver versão.
+  (function () {
+    var available = ["de", "en", "es", "fr", "it", "pt"];
+    var wanted = (navigator.languages || [navigator.language || 'pt']).map(function (l) { return l.slice(0, 2).toLowerCase(); });
+    var pick = wanted.find(function (l) { return available.indexOf(l) !== -1; }) || 'pt';
+    location.replace('/' + pick + '/');
+  })();
+</script>
 </head>
 <body>
-<div class="wrap">
-  <header class="page-header">
-    <a class="brand" href="/">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="32" height="32">
-        <rect width="240" height="240" rx="56" fill="#8DCCC5"/>
-        <g transform="translate(120,122)">
-          <line x1="-22" y1="64" x2="-30" y2="94" stroke="#2E2A26" stroke-width="7" stroke-linecap="round"/>
-          <line x1="22" y1="64" x2="30" y2="94" stroke="#2E2A26" stroke-width="7" stroke-linecap="round"/>
-          <ellipse cx="-32" cy="98" rx="13" ry="7" fill="#2E2A26"/>
-          <ellipse cx="32" cy="98" rx="13" ry="7" fill="#2E2A26"/>
-          <line x1="-40" y1="16" x2="-70" y2="4" stroke="#2E2A26" stroke-width="7" stroke-linecap="round"/>
-          <line x1="40" y1="16" x2="70" y2="4" stroke="#2E2A26" stroke-width="7" stroke-linecap="round"/>
-          <circle cx="-72" cy="4" r="8" fill="#2E2A26"/>
-          <circle cx="72" cy="4" r="8" fill="#2E2A26"/>
-          <rect x="-46" y="-66" width="92" height="112" rx="10" fill="#FFFFFF" stroke="#2E2A26" stroke-width="6"/>
-          <circle cx="-28" cy="-66" r="4.5" fill="#FFD866" stroke="#2E2A26" stroke-width="2"/>
-          <circle cx="-5" cy="-66" r="4.5" fill="#FFD866" stroke="#2E2A26" stroke-width="2"/>
-          <circle cx="18" cy="-66" r="4.5" fill="#FFD866" stroke="#2E2A26" stroke-width="2"/>
-          <circle cx="40" cy="-66" r="4.5" fill="#FFD866" stroke="#2E2A26" stroke-width="2"/>
-          <path d="M -32 -34 L -26 -28 L -16 -42" fill="none" stroke="#4FB0A5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="-8" y1="-36" x2="28" y2="-36" stroke="#E4DED2" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M -32 -10 L -26 -4 L -16 -18" fill="none" stroke="#FF9F5A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="-8" y1="-12" x2="28" y2="-12" stroke="#E4DED2" stroke-width="4.5" stroke-linecap="round"/>
-          <rect x="-32" y="8" width="12" height="12" rx="3" fill="none" stroke="#E4DED2" stroke-width="3.5"/>
-          <line x1="-8" y1="14" x2="28" y2="14" stroke="#E4DED2" stroke-width="4.5" stroke-linecap="round"/>
-          <circle cx="-13" cy="-54" r="4" fill="#2E2A26"/>
-          <circle cx="13" cy="-54" r="4" fill="#2E2A26"/>
-        </g>
-      </svg>
-      <span class="brand-name">Vida Diária</span>
-    </a>
-  </header>
-
-  <h1>Vida Diária</h1>
-  <p class="intro">Aplicativo de organização pessoal — saúde, finanças, agenda, documentos, escola, veículo e muito mais, tudo em um só lugar.</p>
-
-  <div class="home-links">
-    <a class="home-link-card" href="/termos">
-      <div class="home-link-title">Termos de Uso</div>
-      <div class="home-link-sub">Regras de utilização do aplicativo</div>
-    </a>
-    <a class="home-link-card" href="/privacidade">
-      <div class="home-link-title">Política de Privacidade</div>
-      <div class="home-link-sub">Como tratamos seus dados pessoais</div>
-    </a>
-  </div>
-
-  <footer class="site-footer">
-    <a href="mailto:contato@vidadiariaapp.com">contato@vidadiariaapp.com</a>
-  </footer>
-</div>
+<noscript><ul><li><a href="/de/">DE</a></li><li><a href="/en/">EN</a></li><li><a href="/es/">ES</a></li><li><a href="/fr/">FR</a></li><li><a href="/it/">IT</a></li><li><a href="/pt/">PT</a></li></ul></noscript>
 </body>
 </html>
