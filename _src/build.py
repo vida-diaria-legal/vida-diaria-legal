@@ -35,7 +35,7 @@ MODULES = [
     ('notasEscolares', 'school-outline'),
     ('veiculoPessoal', 'car-outline'),
 ]
-FAQ_COUNT = 23
+FAQ_COUNT = 24
 
 # Submódulos com texto próprio (janela ao clicar), na ordem e com os ícones das telas da
 # app (ver app/app/modules/saude/index.tsx). Os nomes vêm da app: health.hub.<chave>.
