@@ -175,6 +175,21 @@ def page(lang, s, langs, current, title, body, path_suffix, alt_paths=None):
 <title>{esc(full_title)}</title>
 <meta name="description" content="{esc(s['meta_description'])}" />
 <link rel="icon" href="/assets/icon.png" />
+<link rel="canonical" href="{DOMAIN}{href_for(lang)}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Vida Diária" />
+<meta property="og:title" content="{esc(full_title)}" />
+<meta property="og:description" content="{esc(s['meta_description'])}" />
+<meta property="og:url" content="{DOMAIN}{href_for(lang)}" />
+<meta property="og:image" content="{DOMAIN}/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="{esc(s['hero_title'])}" />
+<meta property="og:locale" content="{s['html_lang']}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{esc(full_title)}" />
+<meta name="twitter:description" content="{esc(s['meta_description'])}" />
+<meta name="twitter:image" content="{DOMAIN}/assets/og-image.png" />
 {alternates}
 <link rel="stylesheet" href="{asset('/assets/site.css')}" />
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -447,6 +462,10 @@ def build_legal(langs):
 
 
 def root_redirect(langs):
+    # Esta é a página que o WhatsApp e as redes leem quando alguém partilha
+    # vidadiariaapp.com (o convite da app aponta para aqui), por isso leva as
+    # mesmas etiquetas de pré-visualização das outras páginas, em português.
+    pt = load_json(SITE / '_src' / 'i18n' / 'pt.json')
     links = ''.join(f'<li><a href="/{l}/">{l.upper()}</a></li>' for l in langs)
     return f"""<!doctype html>
 <html lang="pt-BR">
@@ -455,6 +474,19 @@ def root_redirect(langs):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vida Diária</title>
 <link rel="icon" href="/assets/icon.png" />
+<meta name="description" content="{esc(pt['meta_description'])}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Vida Diária" />
+<meta property="og:title" content="Vida Diária" />
+<meta property="og:description" content="{esc(pt['meta_description'])}" />
+<meta property="og:url" content="{DOMAIN}/" />
+<meta property="og:image" content="{DOMAIN}/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vida Diária" />
+<meta name="twitter:description" content="{esc(pt['meta_description'])}" />
+<meta name="twitter:image" content="{DOMAIN}/assets/og-image.png" />
 <script>
   // Abre o site no idioma do navegador de quem visita; português se não houver versão.
   (function () {{
