@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Vida Diária</title>
+<link rel="icon" href="/assets/icon.png" />
+<script>
+  (function () {
+    var destinos = {"android": "", "ios": ""};
+    var ua = navigator.userAgent || '';
+    // iPad moderno diz ser Mac: o toque é o que o denuncia.
+    var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var alvo = ios ? destinos.ios : (/Android/i.test(ua) ? destinos.android : '');
+    window.location.replace(alvo || '/');
+  })();
+</script>
+</head>
+<body>
+<p><a href="/">Vida Diária</a></p>
+</body>
+</html>

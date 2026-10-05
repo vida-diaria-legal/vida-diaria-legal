@@ -144,6 +144,13 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
 .stores-top .store ion-icon { font-size: 18px; }
 .stores-top .store-soon { font-size: 8.5px; }
 .stores-top .store-name { font-size: 12.5px; }
+/* Botões a sério, quando as lojas já existem. Num telemóvel, o botão da outra loja
+   fica apagado: quem lê o QR num Android não deve ter de escolher entre duas lojas,
+   mas continua a poder tocar na outra se for isso que quer. */
+.store-live { cursor: pointer; text-decoration: none; }
+.store-live:hover { filter: brightness(1.12); }
+[data-os="android"] .store-for-ios,
+[data-os="ios"] .store-for-android { opacity: 0.45; }
 
 section h2 { font-size: 26px; margin: 0 0 8px; }
 .lead { color: var(--muted); margin: 0 0 24px; }

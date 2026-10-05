@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  // Marca o sistema de quem visita para a folha de estilo poder apagar o botão da
+  // loja que não serve. Corre no <head>, antes de pintar, para o botão não chegar a
+  // piscar aceso. iPad moderno diz ser Mac: o toque é o que o denuncia.
+  (function (u) {
+    var d = document.documentElement;
+    if (/iPhone|iPad|iPod/i.test(u) || (/Macintosh/.test(u) && navigator.maxTouchPoints > 1)) d.dataset.os = 'ios';
+    else if (/Android/i.test(u)) d.dataset.os = 'android';
+  })(navigator.userAgent || '');
+</script>
 <title>Salud — Vida Diária</title>
 <meta name="description" content="Vida Diária: aplicación gratuita de organización personal — salud, finanzas, agenda, documentos, escuela, vehículo y compras, todo en un solo lugar." />
 <link rel="icon" href="/assets/icon.png" />
@@ -22,7 +32,7 @@
 <meta name="twitter:description" content="Vida Diária: aplicación gratuita de organización personal — salud, finanzas, agenda, documentos, escuela, vehículo y compras, todo en un solo lugar." />
 <meta name="twitter:image" content="https://vidadiariaapp.com/assets/og-image.png" />
 <link rel="alternate" hreflang="de" href="https://vidadiariaapp.com/de/modules/health/" /><link rel="alternate" hreflang="en" href="https://vidadiariaapp.com/en/modules/health/" /><link rel="alternate" hreflang="es" href="https://vidadiariaapp.com/es/modules/health/" /><link rel="alternate" hreflang="fr" href="https://vidadiariaapp.com/fr/modules/health/" /><link rel="alternate" hreflang="it" href="https://vidadiariaapp.com/it/modules/health/" /><link rel="alternate" hreflang="pt" href="https://vidadiariaapp.com/pt/modules/health/" />
-<link rel="stylesheet" href="/assets/site.css?v=b7c1c1cee7" />
+<link rel="stylesheet" href="/assets/site.css?v=08d56ceadd" />
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body class="page-module">

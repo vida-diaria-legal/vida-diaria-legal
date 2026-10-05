@@ -23,6 +23,18 @@ SITE = Path(__file__).resolve().parent.parent
 APP_DIR = Path('C:/Users/Eduardo/Desktop/Claude Code/app')
 DOMAIN = 'https://vidadiariaapp.com'
 
+# No dia da publicação, preencher estes dois e correr o build. É a única coisa que
+# muda: os botões das lojas passam de "Em breve" a links a sério, e /baixar/ começa
+# a mandar cada telemóvel para a loja certa.
+#
+# Isto importa mais do que parece. Os QR dos cartões finais dos 60 vídeos apontam
+# todos para https://vidadiariaapp.com — nunca para uma loja — precisamente para
+# que o destino se possa mudar aqui. Os vídeos estão congelados e já publicados no
+# YouTube; um QR desenhado dentro de uma imagem não se corrige.
+PLAY_URL = ''       # ex.: 'https://play.google.com/store/apps/details?id=com.vidadiariaapp.app'
+APPSTORE_URL = ''   # ex.: 'https://apps.apple.com/app/id0000000000'
+STORES_LIVE = bool(PLAY_URL and APPSTORE_URL)
+
 # Ordem da grelha e ícones: iguais aos da tela inicial da app (app/lib/modules.ts).
 MODULES = [
     ('meuDia', 'today-outline'),
@@ -172,6 +184,16 @@ def page(lang, s, langs, current, title, body, path_suffix, alt_paths=None):
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  // Marca o sistema de quem visita para a folha de estilo poder apagar o botão da
+  // loja que não serve. Corre no <head>, antes de pintar, para o botão não chegar a
+  // piscar aceso. iPad moderno diz ser Mac: o toque é o que o denuncia.
+  (function (u) {{
+    var d = document.documentElement;
+    if (/iPhone|iPad|iPod/i.test(u) || (/Macintosh/.test(u) && navigator.maxTouchPoints > 1)) d.dataset.os = 'ios';
+    else if (/Android/i.test(u)) d.dataset.os = 'android';
+  }})(navigator.userAgent || '');
+</script>
 <title>{esc(full_title)}</title>
 <meta name="description" content="{esc(s['meta_description'])}" />
 <link rel="icon" href="/assets/icon.png" />
@@ -240,15 +262,64 @@ def page(lang, s, langs, current, title, body, path_suffix, alt_paths=None):
 
 
 def store_buttons(s, extra_class=''):
-    def button(icon, name):
-        return (
-            f'<span class="store" aria-disabled="true">'
+    # Enquanto PLAY_URL/APPSTORE_URL estiverem vazios, os botões são `<span>` mortos
+    # com "Em breve"; assim que forem preenchidos, passam a `<a>` a sério sozinhos.
+    # A classe `store-for-android`/`store-for-ios` deixa a folha de estilo dar
+    # destaque ao botão da loja do aparelho de quem visita (ver `data-os` no <html>).
+    def button(icon, name, href, platform):
+        inner = (
             f'<ion-icon name="{icon}" aria-hidden="true"></ion-icon>'
             f'<span class="store-text"><span class="store-soon">{esc(s["stores_soon"])}</span>'
-            f'<span class="store-name">{esc(name)}</span></span></span>'
+            f'<span class="store-name">{esc(name)}</span></span>'
         )
+        if not href:
+            return f'<span class="store" aria-disabled="true">{inner}</span>'
+        live = (
+            f'<ion-icon name="{icon}" aria-hidden="true"></ion-icon>'
+            f'<span class="store-text"><span class="store-soon">{esc(s["stores_get"])}</span>'
+            f'<span class="store-name">{esc(name)}</span></span>'
+        )
+        return f'<a class="store store-live store-for-{platform}" href="{href}">{live}</a>'
+
     cls = f'stores {extra_class}'.strip()
-    return f'<div class="{cls}">{button("logo-google-playstore", s["store_google"])}{button("logo-apple", s["store_apple"])}</div>'
+    play = button('logo-google-playstore', s['store_google'], PLAY_URL, 'android')
+    apple = button('logo-apple', s['store_apple'], APPSTORE_URL, 'ios')
+    return f'<div class="{cls}">{play}{apple}</div>'
+
+
+def download_page(langs):
+    """/baixar/ — manda cada aparelho para a sua loja.
+
+    É o endereço a usar em QR novos, ligações curtas e no convite da app: um só
+    link que serve Android e iPhone. Não tem texto nenhum de propósito, para não
+    precisar de tradução — quando não consegue decidir (computador, ou lojas ainda
+    por publicar), empurra para a raiz, que trata do idioma.
+    """
+    destinos = json.dumps({'android': PLAY_URL, 'ios': APPSTORE_URL})
+    return f"""<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Vida Diária</title>
+<link rel="icon" href="/assets/icon.png" />
+<script>
+  (function () {{
+    var destinos = {destinos};
+    var ua = navigator.userAgent || '';
+    // iPad moderno diz ser Mac: o toque é o que o denuncia.
+    var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var alvo = ios ? destinos.ios : (/Android/i.test(ua) ? destinos.android : '');
+    window.location.replace(alvo || '/');
+  }})();
+</script>
+</head>
+<body>
+<p><a href="/">Vida Diária</a></p>
+</body>
+</html>
+"""
 
 
 def home_body(lang, s, app):
@@ -527,6 +598,10 @@ def main():
     build_legal(langs)
     (SITE / 'index.html').write_text(root_redirect(langs), encoding='utf-8')
     print('raiz: redireciona para', langs)
+    baixar = SITE / 'baixar'
+    baixar.mkdir(exist_ok=True)
+    (baixar / 'index.html').write_text(download_page(langs), encoding='utf-8')
+    print('/baixar/:', 'manda para as lojas' if STORES_LIVE else 'ainda sem lojas, empurra para a raiz')
 
 
 if __name__ == '__main__':
