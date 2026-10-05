@@ -131,7 +131,7 @@
     },
     "veiculoPessoal": {
       "p1": "Privatfahrzeug bündelt alles rund um Ihr Fahrzeug: Tankvorgänge, Wartungen, Inspektionen und Kilometerstand, mit Erinnerungen vor jedem festgelegten Datum. Die Verbrauchsberechnung nutzt Ihre alltäglichen Tankvorgänge, um zu zeigen, wie viel das Fahrzeug tatsächlich verbraucht, und funktioniert auch mit Elektro- und Hybridautos, einschließlich des Ladens zu Hause.",
-      "p2": "Legen Sie das Fahrzeug mit dem aktuellen Kilometerstand, der geschätzten Kraftstoffmenge im Tank und dem Gesamtvolumen des Tanks an — diese Angaben sollten so genau wie möglich sein, denn sie fließen in die Verbrauchsberechnung ein. Erfassen Sie danach jeden Tankvorgang: Die Ergebnisse erscheinen ab dem ersten Tanken."
+      "p2": "Legen Sie das Fahrzeug mit dem aktuellen Kilometerstand, der geschätzten Kraftstoffmenge im Tank und dem Gesamtvolumen des Tanks an — diese Angaben sollten so genau wie möglich sein, denn sie fließen in die Verbrauchsberechnung ein. Tippen Sie danach in der Verbrauchsberechnung auf „Starten“ und erfassen Sie jeden Tankvorgang: Die Ergebnisse erscheinen ab dem ersten. Ohne gestartete Berechnung werden Tankvorgänge zwar gespeichert, zählen aber nicht mit."
     }
   },
   "submodules": {

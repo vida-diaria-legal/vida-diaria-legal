@@ -131,7 +131,7 @@
     },
     "veiculoPessoal": {
       "p1": "Véhicule personnel réunit tout ce qui concerne votre véhicule : pleins, révisions, contrôles techniques et kilométrage, avec des rappels avant chaque date prévue. Le Calcul de consommation s'appuie sur les pleins que vous faites au quotidien pour montrer ce que votre véhicule consomme réellement, et fonctionne aussi avec les voitures électriques et hybrides, y compris la recharge à domicile.",
-      "p2": "Enregistrez le véhicule avec son kilométrage actuel, la quantité estimée de carburant dans le réservoir et la capacité totale du réservoir — ces informations doivent être aussi exactes que possible, car elles entrent dans le calcul de la consommation. Ensuite, enregistrez chaque plein : les résultats apparaissent dès le premier plein."
+      "p2": "Enregistrez le véhicule avec son kilométrage actuel, la quantité estimée de carburant dans le réservoir et la capacité totale du réservoir — ces informations doivent être aussi exactes que possible, car elles entrent dans le calcul de la consommation. Ensuite, dans Calcul de consommation, appuyez sur « Démarrer » et enregistrez chaque plein : les résultats apparaissent dès le premier. Sans démarrer le calcul, les pleins sont enregistrés mais n'y entrent pas."
     }
   },
   "submodules": {

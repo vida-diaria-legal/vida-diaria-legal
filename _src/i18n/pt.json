@@ -131,7 +131,7 @@
     },
     "veiculoPessoal": {
       "p1": "Veículo Pessoal reúne tudo sobre o seu veículo: abastecimentos, revisões, inspeções e quilometragem, com avisos antes de cada data marcada. O Cálculo de Consumo usa os abastecimentos que você realiza no dia a dia para mostrar quanto o veículo está realmente consumindo, e funciona também com carros elétricos e híbridos, incluindo a recarga em casa.",
-      "p2": "Cadastre o veículo com a quilometragem atual, a quantidade estimada de combustível no tanque e a capacidade total do tanque — estas informações precisam ser o mais exatas possível, porque entram no cálculo do consumo. Depois, registre cada abastecimento: os resultados aparecem a partir do primeiro abastecimento."
+      "p2": "Cadastre o veículo com a quilometragem atual, a quantidade estimada de combustível no tanque e a capacidade total do tanque — estas informações precisam ser o mais exatas possível, porque entram no cálculo do consumo. Depois, em Cálculo de Consumo, toque em ‘Iniciar’ e registre cada abastecimento: os resultados aparecem a partir do primeiro. Sem iniciar o cálculo, os abastecimentos ficam guardados mas não entram na conta."
     }
   },
   "submodules": {
