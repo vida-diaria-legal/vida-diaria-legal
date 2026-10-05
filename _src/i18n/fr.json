@@ -98,7 +98,7 @@
   },
   "module_pages": {
     "meuDia": {
-      "p1": "Ma Journée - Aujourd'hui est l'écran qui réunit, en un seul endroit, tout ce qui se passe ou arrive à échéance aujourd'hui dans tous les autres modules : le médicament à la bonne heure, la facture qui arrive à échéance, le rendez-vous prévu, l'examen à l'école, l'anniversaire de quelqu'un, la révision de la voiture. Vous ouvrez l'application le matin et, en quelques secondes, vous savez ce que la journée vous réserve, sans avoir à entrer dans chaque module. Vous pouvez aussi noter un rappel rapide, valable uniquement pour ce jour-là, et masquer un élément déjà réglé.",
+      "p1": "Ma Journée - Aujourd'hui est votre écran de consultation quotidien : il montre tout ce que vous avez enregistré dans les autres modules et qui a lieu aujourd'hui — le médicament à la bonne heure, la facture à payer, le rendez-vous prévu, le contrôle à l'école, les anniversaires. Vous ouvrez l'application le matin et, en quelques secondes, vous savez ce que la journée vous réserve, sans avoir à entrer dans chaque module. Avec « Ajouter », vous pouvez aussi inscrire un événement du jour qui n'était pas prévu, et l'icône « x » retire l'événement de cette journée seulement.",
       "p2": "Ma Journée - Aujourd'hui n'a rien à remplir : il se nourrit de ce que vous enregistrez dans les autres modules. Commencez par un ou deux modules qui règlent quelque chose pour vous dès maintenant, comme Factures à payer/recevoir ou les médicaments dans Santé, puis revenez ici — tout ce qui est daté d'aujourd'hui apparaîtra déjà. Pour un rappel d'un seul jour, utilisez le bouton « Ajouter »."
     },
     "saude": {

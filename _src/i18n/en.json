@@ -98,7 +98,7 @@
   },
   "module_pages": {
     "meuDia": {
-      "p1": "My Day - Today is the screen that brings together, in one place, everything that's happening or due today across all the other modules: the medicine at the right time, the bill that's due, the scheduled appointment, the school test, someone's birthday, the car's maintenance. You open the App in the morning and, in seconds, you know what the day calls for, without having to go into each module. You can also jot down a quick reminder, valid for that day only, and hide an item you've already taken care of.",
+      "p1": "My Day - Today is your daily overview: it shows everything you saved in the other modules that happens today — the medicine at the right time, the bill to pay, the scheduled appointment, the school test, birthdays. You open the App in the morning and, in seconds, you know what the day calls for, without having to go into each module. Under ‘Add’ you can still include something that came up today and was not planned, and the ‘x’ icon removes an event from that day only.",
       "p2": "My Day - Today has nothing to fill in: it's fed by what you enter in the other modules. Start with one or two that solve something for you right now, like Bills to Pay or the medications in Health, and come back here — anything dated today will already show up. For a one-day reminder, use the ‘Add’ button."
     },
     "saude": {
