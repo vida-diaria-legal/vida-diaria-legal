@@ -173,6 +173,9 @@ def page(lang, s, langs, current, title, body, path_suffix, alt_paths=None):
     alternates = ''.join(
         f'<link rel="alternate" hreflang="{l}" href="{DOMAIN}{href_for(l)}" />' for l in langs
     )
+    # x-default: para quem não fala nenhum dos seis, e para o Google saber qual é a porta
+    # de entrada do conjunto. É a raiz, que é precisamente a página que escolhe o idioma.
+    alternates += f'<link rel="alternate" hreflang="x-default" href="{DOMAIN}/" />'
     nav_items = [('home', ''), ('faq', 'faq/'), ('support', 'support/')]
     nav = ''.join(
         f'<a href="/{lang}/{href}"{" aria-current=\"page\"" if key == current else ""}>{esc(s["nav"][key])}</a>'
@@ -575,6 +578,50 @@ def root_redirect(langs):
 """
 
 
+def build_sitemap():
+    """O sitemap.xml e o robots.txt, a partir das páginas que FORAM escritas.
+
+    Percorre o site em vez de repetir a lista de páginas: assim uma página nova entra
+    sozinha, e nenhuma pode ficar de fora por esquecimento.
+
+    Ficam de fora a raiz e o /baixar/, que são redirecionamentos e não têm conteúdo
+    próprio — pô-los aqui seria pedir ao Google que indexasse duas páginas que a própria
+    app manda ignorar.
+
+    Sem <lastmod>, de propósito: o gerador reescreve os 90 ficheiros a cada build, por
+    isso a data do ficheiro diria que tudo mudou sempre que se corrige uma vírgula numa
+    página. Uma data que mente é pior do que nenhuma — o Google desconfia dela e passa a
+    ignorá-la em todo o sitemap.
+    """
+    urls = []
+    for ficheiro in SITE.rglob('index.html'):
+        partes = ficheiro.relative_to(SITE).parts
+        if '_src' in partes or '.git' in partes:
+            continue
+        rel = ficheiro.parent.relative_to(SITE).as_posix()
+        if rel in ('.', 'baixar'):
+            continue
+        urls.append(f'{DOMAIN}/{rel}/')
+    urls.sort()
+
+    corpo = ''.join(f'  <url><loc>{u}</loc></url>\n' for u in urls)
+    (SITE / 'sitemap.xml').write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f'{corpo}'
+        '</urlset>\n',
+        encoding='utf-8',
+    )
+    (SITE / 'robots.txt').write_text(
+        'User-agent: *\n'
+        'Allow: /\n'
+        '\n'
+        f'Sitemap: {DOMAIN}/sitemap.xml\n',
+        encoding='utf-8',
+    )
+    print(f'sitemap.xml: {len(urls)} páginas · robots.txt escrito')
+
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     langs = site_languages()
@@ -602,6 +649,7 @@ def main():
     baixar.mkdir(exist_ok=True)
     (baixar / 'index.html').write_text(download_page(langs), encoding='utf-8')
     print('/baixar/:', 'manda para as lojas' if STORES_LIVE else 'ainda sem lojas, empurra para a raiz')
+    build_sitemap()
 
 
 if __name__ == '__main__':
